@@ -1,7 +1,8 @@
 :root {
+    --light-blue-100: #F3F5FC;
     --dark-blue-300: #0A3871;
     --gray-300: #495057;
-    --light-blue-100: #F3F5FC;
+    --gray-400: #495057;
 }
 
 * {
@@ -9,64 +10,68 @@
     font-weight: 400;
 }
 
+body {
+    background-color: var(--light-blue-100);
+}
+
 main {
-    background-color: #F3F5FC;
-    height: 100vh;
-    min-height: fit-content;
-    padding: 70px;
+    max-width: 1920px;
+}
+
+.decodificador {
+    min-height: 600px !important;
+}
+
+.logo {
+    width: 25px;
+    height: auto;
 }
 
 textarea {
-    resize: none;
     outline: none;
-    height: 100%;
+    resize: none;
 }
 
-.row {
-    min-height: 80%;
-    height: 100%;
+.input-area {
+    padding-bottom: 32px !important;
 }
 
-#input-text {
+.input-area textarea {
     color: var(--dark-blue-300);
 }
 
-.output-area {
-    background-color: white;
-    min-width: fit-content;
+.output-area textarea {
     color: var(--gray-300)
 }
 
-.button-area .warning {
+.warning {
     color: var(--gray-300);
 }
 
-.button-group {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 20px;
+.button {
     border-radius: 24px;
-    width: 100%;
-    min-width: 200px;
-    max-width: 300px;
-    min-height: 65px;
+    border: none;
 }
 
-.btn-primary {
-    background-color: var(--dark-blue-300) !important;
-    color: white !important;
+.button-primary {
+    background-color: var(--dark-blue-300);
+    color: white;
 }
 
-.btn-secondary {
-    background-color: var(--light-blue-100) !important;
-    color: var(--dark-blue-300) !important;
+.button-secondary {
+    background-color: var(--light-blue-100);
+    color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
 }
 
-.btn:hover {
-    background-color: inherit;
-    color: inherit;
+.output-area {
+    padding: 32px;
+    background-color: white;
+    border-radius: 32px;
 }
+
+@media only screen and (max-width: 576px) {
+    .decodificador {
+        min-height: 900px !important;
+    }
+  }
