@@ -38,21 +38,23 @@
                         </p>
                         <div class="button-group row gap-3 gap-md">
                             <div class="col-12 col-md">
-                                <button class="button button-primary w-100 p-3" id="encrypt-button">Criptografar</button>
+                                <button class="button button-primary w-100 p-3" id="encrypt-button" onclick="handleEncryptClick()">Criptografar</button>
                             </div>
                             <div class="col-12 col-md">
-                                <button class="button button-secondary w-100 p-3" id="decrypt-button">Descriptografar</button>
+                                <button class="button button-secondary w-100 p-3" id="decrypt-button" onclick="handleDecryptClick()">Descriptografar</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-4 col-xl-3 output-area d-flex flex-column justify-content-between shadow">
-                    <textarea class="w-100 h-100 border-0" name="output-text" id="output-text">asdasdasdzxc</textarea>
-                    <button class="button button-secondary p-3 mt-3" id="copy-button">Copiar</button>
+                    <textarea class="w-100 h-100 border-0" name="output-text" id="output-text" readonly>Texto descriptografado vai aqui</textarea>
+                    <button class="button button-secondary p-3 mt-3" id="copy-button" onclick="handleCopyClick()">Copiar</button>
                 </div>
             </div>
         </div>
     </main>
+
+    <script src="./index.js"></script>
 </body>
 
 </html>
