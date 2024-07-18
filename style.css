@@ -30,10 +30,11 @@ main {
 textarea {
     outline: none;
     resize: none;
+    min-height: 200px;
 }
 
 .input-area {
-    padding-bottom: 32px !important;
+    /* padding-bottom: 32px !important; */
 }
 
 .input-area textarea {
@@ -65,13 +66,20 @@ textarea {
 }
 
 .output-area {
-    padding: 32px;
     background-color: white;
     border-radius: 32px;
 }
 
-@media only screen and (max-width: 576px) {
-    .decodificador {
-        min-height: 900px !important;
-    }
-  }
+.output-default h2 {
+    font-size: 24px;
+}
+
+i {
+    font-size: 2rem;
+    color: var(--dark-blue-300);
+}
+
+
+/* @media only screen and (max-width: 576px) {
+
+} */
