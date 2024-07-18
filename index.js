@@ -20,6 +20,7 @@ function handleEncryptClick() {
     })
     encrypted_string = encrypted_string.join("");
     document.querySelector("#output-text").value = encrypted_string;
+    updateOutputArea();
 }
 
 function handleDecryptClick() {
@@ -41,9 +42,21 @@ function handleDecryptClick() {
     }
 
     document.querySelector("#output-text").value = decrypted_string;
+    updateOutputArea();
 }
 
 async function handleCopyClick() {
     var content = document.querySelector("#output-text").value;
     await navigator.clipboard.writeText(content);
+}
+
+function updateOutputArea() {
+    if (!document.querySelector("#output-text").value) {
+        document.querySelector("#output-default").classList.remove("d-none");
+        document.querySelector("#output-menu").classList.add("d-none");
+    }
+    else {
+        document.querySelector("#output-menu").classList.remove("d-none");
+        document.querySelector("#output-default").classList.add("d-none");
+    }
 }
