@@ -37,8 +37,9 @@ textarea {
     /* padding-bottom: 32px !important; */
 }
 
-.input-area textarea {
+.input-area textarea, .input-area textarea::placeholder {
     color: var(--dark-blue-300);
+    opacity: 1;
 }
 
 .output-area textarea {
